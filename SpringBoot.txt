@@ -211,4 +211,24 @@ POST /users/{id}/posts creates the post of the user.
 401 : UNAUTHORIZED
 500 : SERVER ERROR
 
+Spring Boot DevTools
+
+-> DevTools Developer Tool.
+-> To reduce the Development Time
+-> Auto restart When we perform any changes
+-> Live Reload
+-> Remote Applications
+-> Remote Debugging
+-> Property Default -realted to cahche
+
+# Creating Rest API
+
+How to call API
+Postman
+ 
+
+
+
+
+
 
