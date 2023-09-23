@@ -1,0 +1,162 @@
+##SpringBoot
+
+#How to craete Spring Boot Project using Spring initializer
+
+Go to this Website start.spring.io
+
+https://start.spring.io/
+
+
+@Configuration
+@ComponentScan               ==== @SpringBootApplication SpringBoot minimise the Anotation
+@EnableAutoConfiguration 
+
+
+# application.properties
+
+Application Configuration 
+
+preconfigured Application -> According to Depandancies -> Our CCustomize Application -> application.properties
+
+Server properties
+Cache properties
+Transaction Properties
+Json Properties
+Db properties
+JPA properties
+
+Alternative -> application.yml
+
+# What is the use of application.properties file in Spring Boot ?
+
+It is just a Configuration file in which data is present in the form of a key value Pairs and it is bassiclly used in Spring boot to configures the properties of Application.we get the Preconfigured application if we want to customized the properties of our Application than we use this file.
+
+
+## JPA 
+#  Java Persistence API
+
+-> JPA is a ORM Tool
+-> Object Relation Mapping
+-> Saving the object into db and vice versa -> ORM
+-> ORM will handle this by creating the object of this class and save it to in the Database.
+-> ORM which creates the Bridge for Communication Between the Java Application and RDB
+
+class User
+{
+int id;
+String name;
+String city;
+String profile;
+}
+
+# JPA is a Specification (Bunch of interfaces)
+--> JPA is a ORM Tool.
+Hibernate is a Implementation (Bunch of classes that implements the JPA )
+-> ORM Provieder or Framework
+
+--> Hibernate
+--> Open JPA 
+--> Eclipse Link
+--> Top Link
+
+Interface
+
+EntityManagerfactory -> EntityManager ->
+
+create
+Update
+Read
+Delete
+
+Spring Boot Makes easier to perform Opertaion with JPA Auto Configuration
+
+# spring-boot-starter-data-jpa
+
+
+User 
+
+extends Because these are Interface
+
+UserRepository -> JPARespository -> CRUDRespository  
+
+
+For SQL ->
+
+spring-boot-starter-data-jpa
+MySQL Driver
+
+Configuration of DataBase
+
+spring.datasource.name=   name of datasource or database
+spring.datasource.url=
+spring.datasource.username= 
+spring.datasource.password=
+
+
+spring.jpa.properties.hibernate.dailect= org.
+//For Schema creation update drop create-drop 
+spring.jpa.hibernate.ddl-auto=create 
+
+JPA methods for CRUD Operations
+
+save()
+saveAll()
+
+findBy<Properties>() -> return Optional containing Data.
+findAll()
+
+delete(id);
+deleteById();
+delete(object); 
+deleteAll();
+
+
+Custome Finder methods
+by default From CRUDRepository
+
+findAllById
+findById()
+findAll()
+
+Custome Finder Methods / Derived Query Methods
+data by name
+data by name and password
+data by name or password
+data name starting with prefix
+data by like 'Keyword'
+
+select * from user where name="something"
+
+public List<User> findByName(String name);
+
+name=findByName
+
+find -introducer 
+ByName -criteria
+name   -property 
+
+Spring datasupported Keywords on google
+
+https://docs.spring.io/spring-data/jpa/docs/current-SNAPSHOT/reference/html/#jpa.query-methods
+
+
+JPQL- Java Persistance Query language
+
+# Executing JPQL and  with Spring Data JPA |
+@Query @Param Annotations
+
+-> JPQL
+-> Native Queries
+
+->JPQL
+
+select u FROM User u  -> getAllUsers()
+@Query(select u FROM USER u Where u.name=:name)   ->getUserByName(@Param("n") String name)
+
+When sql
+@Query(value=" ", nativeQuery=true)
+
+
+#Rest API
+
+
