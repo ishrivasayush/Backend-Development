@@ -157,6 +157,58 @@ When sql
 @Query(value=" ", nativeQuery=true)
 
 
-#Rest API
+## Rest API
+
+# API/Web services
+## Application Programming Interface
+
+It is set of rules that allow programs to talk to each other.The Developer creates the API on the server and allows the client to talk to it.
+
+Example -> 
+
+-> Adding the youtube vedio on our Page Google/youtube api
+-> Payment Gatways
+-> Google signin and FaceBook signIn
+
+Our                                    Youtube server
+website  ---> URL/URI  Request --->API
+
+JSON <--- Response <---Youtube Server
+
+
+
+User ->UserServer -> Paytm API -> Request -> Paytm Server
+
+# REST API
+
+A set of constraints to be used for web services.
+constraints are:
+
+Client-Server
+Stateless  server not save the Data		
+Cacheable  performace |
+Layered
+
+The important methods of HTTP are:
+
+GET: It reads the Resources
+PUT: It updates an existing resource
+POST: It creates a new resource.
+DELETE: It deletes the resource
+
+POST /users
+GET /users/{id}
+GET /users 
+DELETE /users
+DELETE /users/{id}
+GET /users/{id}/Posts/post_id
+POST /users/{id}/posts creates the post of the user.
+
+# Status Code
+404 : RESOURCE NOT FOUND
+200 : SUCCESS
+201 : CREATED
+401 : UNAUTHORIZED
+500 : SERVER ERROR
 
 
