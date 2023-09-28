@@ -1,9 +1,6 @@
 package com.narainox.bookmanager.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -13,5 +10,8 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String title;
-    private String author;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "author_id")
+    private Author author;
 }

@@ -36,7 +36,7 @@ public class BookController {
         return bookService.getBookById(bookId);
     }
 
-    @PutMapping("/get/{bookId}")
+    @PutMapping("/update/{bookId}")
     public ResponseEntity<Book> updateBookHandler(@PathVariable Integer bookId,@RequestBody Book book)
     {
         return bookService.updateBook(book,bookId);
