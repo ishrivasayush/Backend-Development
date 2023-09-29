@@ -3,18 +3,17 @@ package com.narainox.bookmanager.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Data
-public class Author {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer Id;
-    private String firstName;
-    private String lastName;
-    private String language;
+    private Integer id;
+    private String category;
 
-    @OneToOne()
-    private Book book;
-
+    @OneToMany(mappedBy ="category")
+    private List<Book> bookList;
 
 }

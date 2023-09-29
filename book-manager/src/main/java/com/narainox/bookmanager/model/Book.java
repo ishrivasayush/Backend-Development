@@ -14,4 +14,9 @@ public class Book {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id")
     private Author author;
+
+    @ManyToOne()
+    @JoinColumn(name = "category_id")
+    private Category category;
+
 }
